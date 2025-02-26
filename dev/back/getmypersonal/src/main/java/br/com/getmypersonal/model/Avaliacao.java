@@ -33,12 +33,21 @@ public abstract class Avaliacao {
     private Paciente paciente;
 
     @ManyToOne
-    @JoinColumn(name = "profissional_id", nullable = false)
+    @JoinColumn(name = "profissional_id")
     private Profissional profissional;
+    
+    @ManyToOne
+    @JoinColumn(name = "estudante_id")
+    private Estudante estudante;
 
     @Column(name = "data_avaliacao", nullable = false)
     private LocalDate dataAvaliacao;
 
     @Column(columnDefinition = "TEXT")
     private String observacoes;
+    
+    @ManyToOne
+    @JoinColumn(name = "consulta_id", nullable = false)
+    private Consulta consulta;
+    
 }

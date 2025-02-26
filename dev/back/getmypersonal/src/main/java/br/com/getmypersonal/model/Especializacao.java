@@ -5,11 +5,10 @@ import java.util.List;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -18,32 +17,31 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "exercicio")
+@Table(name = "especializacao")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Exercicio {
+public class Especializacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false, length = 100, unique = true)
     private String nome;
-
-    @Column(columnDefinition = "TEXT")
-    private String descricao;
     
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private GrupoMuscular grupoMuscular;
+    @Column(name = "nome_instituicao")
+    private String nomeInstituicao;
     
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private NivelDificuldade dificuldade;
+    @Column(name = "ano_conclusao")
+    private Integer anoConclusao;
     
-    @OneToMany(mappedBy = "exercicio", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<TreinoExercicio> treinos;
+    @OneToMany(mappedBy = "especialidade", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ProfissionalEspecializacao> profissionais;
+    
+    @Lob
+    @Column(name = "foto_certificado", nullable = false)
+    private byte[] fotoCertificado;
     
 }

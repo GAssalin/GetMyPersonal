@@ -22,4 +22,5 @@ public class AvaliacaoAnamnese extends Avaliacao {
 
     @Column(name = "uso_medicacoes", columnDefinition = "TEXT")
     private String usoMedicacoes;
+    
 }

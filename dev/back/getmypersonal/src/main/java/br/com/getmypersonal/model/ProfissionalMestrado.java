@@ -1,6 +1,5 @@
 package br.com.getmypersonal.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,25 +13,23 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "contato")
+@Table(name = "profissional_mestrado")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Contato {
+public class ProfissionalMestrado {
 
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "pessoa_id", nullable = false)
-    private Pessoa pessoa;
+    @JoinColumn(name = "profissional_id", nullable = false)
+    private Profissional profissional;
 
-    @Column(nullable = false, length = 50)
-    private TipoContato tipo;
-
-    @Column(nullable = false, length = 20)
-    private String valor;
-    
+    @ManyToOne
+    @JoinColumn(name = "mestrado_id", nullable = false)
+    private Mestrado mestrado;
+	
 }

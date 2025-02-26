@@ -36,6 +36,7 @@ public class TreinoExercicio {
     private Integer series;
     private Integer repeticoes;
 
-    @Column(precision = 5, scale = 2)
+    @Column(precision = 5)
     private Double carga;
+    
 }

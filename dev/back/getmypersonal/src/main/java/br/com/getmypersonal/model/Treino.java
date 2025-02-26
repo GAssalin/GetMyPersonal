@@ -55,9 +55,18 @@ public class Treino {
     private Treinador treinador;
 
     @ManyToOne
-    @JoinColumn(name = "aluno_id", nullable = false)
+    @JoinColumn(name = "paciente_id", nullable = false)
     private Paciente aluno;
 
     @OneToMany(mappedBy = "treino", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TreinoExercicio> exercicios;
+    
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private ObjetivoTreino objetivo;
+    
+    @ManyToOne
+    @JoinColumn(name = "consulta_id", nullable = false)
+    private Consulta consulta;
+    
 }

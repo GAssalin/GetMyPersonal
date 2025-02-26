@@ -13,12 +13,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "profissional_especialidade")
+@Table(name = "profissional_especializacao")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProfissionalEspecialidade {
+public class ProfissionalEspecializacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,5 +30,6 @@ public class ProfissionalEspecialidade {
 
     @ManyToOne
     @JoinColumn(name = "especialidade_id", nullable = false)
-    private Especialidade especialidade;
+    private Especializacao especialidade;
+    
 }
