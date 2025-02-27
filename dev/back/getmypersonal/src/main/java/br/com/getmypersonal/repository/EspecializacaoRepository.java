@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import br.com.getmypersonal.model.Especializacao;
 
 @Repository
-public interface EspecialidadeRepository extends JpaRepository<Especializacao, Long> {
+public interface EspecializacaoRepository extends JpaRepository<Especializacao, Long> {
 }
