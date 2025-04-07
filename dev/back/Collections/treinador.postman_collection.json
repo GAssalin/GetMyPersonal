@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "Treinador API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Treinadores",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/treinadores",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinadores"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar Treinador por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/treinadores/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinadores",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar Treinador",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nome\": \"Andr\\u00e9 Personal\",\n    \"email\": \"andre@email.com\",\n    \"telefone\": \"11999994444\",\n    \"cref\": \"987654-G/SP\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/treinadores",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinadores"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Treinador",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nome\": \"Andr\\u00e9 Silva\",\n    \"email\": \"andre.silva@email.com\",\n    \"telefone\": \"11988886666\",\n    \"cref\": \"987654-G/SP\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/treinadores/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinadores",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Deletar Treinador",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/treinadores/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinadores",
+            ":id"
+          ]
+        }
+      }
+    }
+  ]
+}

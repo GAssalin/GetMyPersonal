@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "AvaliacaoPostural API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Avalia\u00e7\u00f5es Posturais",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/avaliacoes-posturais",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "avaliacoes-posturais"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar Avalia\u00e7\u00e3o Postural por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/avaliacoes-posturais/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "avaliacoes-posturais",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar Avalia\u00e7\u00e3o Postural",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"avaliacaoId\": 1,\n    \"cabeca\": \"alinhada\",\n    \"ombros\": \"desnivelados\",\n    \"coluna\": \"lordose acentuada\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/avaliacoes-posturais",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "avaliacoes-posturais"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Avalia\u00e7\u00e3o Postural",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"avaliacaoId\": 1,\n    \"cabeca\": \"projetada\",\n    \"ombros\": \"alinhados\",\n    \"coluna\": \"normal\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/avaliacoes-posturais/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "avaliacoes-posturais",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Deletar Avalia\u00e7\u00e3o Postural",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/avaliacoes-posturais/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "avaliacoes-posturais",
+            ":id"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "Treino API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Treinos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar Treino por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar Treino",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nome\": \"Treino de Segunda\",\n    \"descricao\": \"Treino focado em membros superiores\",\n    \"pacienteId\": 1\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Treino",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"nome\": \"Treino de Segunda Atualizado\",\n    \"descricao\": \"Inclui exerc\\u00edcios para costas e b\\u00edceps\",\n    \"pacienteId\": 1\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Deletar Treino",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos",
+            ":id"
+          ]
+        }
+      }
+    }
+  ]
+}

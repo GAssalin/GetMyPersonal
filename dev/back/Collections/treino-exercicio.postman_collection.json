@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "TreinoExercicio API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Treinos \u2194 Exerc\u00edcios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos-exercicios",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos-exercicios"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar Treino \u2194 Exerc\u00edcio por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos-exercicios/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos-exercicios",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar Treino \u2194 Exerc\u00edcio",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"treinoId\": 1,\n    \"exercicioId\": 2,\n    \"series\": 4,\n    \"repeticoes\": 12\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos-exercicios",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos-exercicios"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Treino \u2194 Exerc\u00edcio",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"treinoId\": 1,\n    \"exercicioId\": 2,\n    \"series\": 3,\n    \"repeticoes\": 15\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos-exercicios/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos-exercicios",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Deletar Treino \u2194 Exerc\u00edcio",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/treinos-exercicios/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "treinos-exercicios",
+            ":id"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "info": {
+    "name": "AnamnesePerguntas API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Listar Perguntas de Anamnese",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/anamnese-perguntas",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "anamnese-perguntas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar Pergunta por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/anamnese-perguntas/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "anamnese-perguntas",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar Pergunta de Anamnese",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"titulo\": \"Voc\\u00ea sente dor ao se movimentar?\",\n    \"descricao\": \"Descreva a dor sentida durante atividades f\\u00edsicas.\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/anamnese-perguntas",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "anamnese-perguntas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Pergunta de Anamnese",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"titulo\": \"Voc\\u00ea sente dores nas articula\\u00e7\\u00f5es?\",\n    \"descricao\": \"Informe se h\\u00e1 alguma dor frequente nas articula\\u00e7\\u00f5es.\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/anamnese-perguntas/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "anamnese-perguntas",
+            ":id"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Deletar Pergunta de Anamnese",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/anamnese-perguntas/:id",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "anamnese-perguntas",
+            ":id"
+          ]
+        }
+      }
+    }
+  ]
+}
