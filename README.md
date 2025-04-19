@@ -18,6 +18,7 @@ O **GetMyPersonal** é um aplicativo voltado para personal trainers e profission
 ### Backend
 
 #### ✅ Rodando com Docker (Recomendado para Devs Frontend)
+⚠️ Certifique-se de ter o Docker instalado antes de rodar os comandos abaixo.
 ```bash
 # Clone o repositório
 git clone https://github.com/seu-usuario/GetMyPersonal.git
@@ -30,14 +31,12 @@ make up
 
 # OU execute o script shell (Linux/macOS/WSL)
 ./run.sh
-
+s
 # OU execute o script para Windows (cmd/PowerShell)
 run.bat
 ```
 
-> ⚠️ Certifique-se de ter o Docker instalado antes de rodar os comandos acima.
-
-#### ❗Comandos úteis adicionais:
+#### ✅ Comandos úteis adicionais:
 ```bash
 make down    # Encerra os containers
 make logs    # Exibe os logs da API
@@ -46,6 +45,7 @@ make logs    # Exibe os logs da API
 ---
 
 #### ⚙️ Rodando localmente sem Docker (modo manual)
+❗ Credenciais devem ser alteradas e protegidas em ambientes reais
 ```bash
 # Configure o banco MySQL localmente:
 # DB: getmypersonal | User: root | Password: root
@@ -57,12 +57,38 @@ mvn spring-boot:run
 ---
 
 ### Frontend
+> ⚠️ Atualmente o Front encontra-se em etapa de modelo, estudo e análises.
 ```bash
 # Acesse a pasta do frontend
+📦 GetMyPersonal
+└── 📁 dev
+    └── 📁 front
+        └── 📁 react
+            └── 📁 modelosEEstudos
+                └── 📁 {{Escolher o modelo desejado para ser executado e testado}}
 
 # Instale as dependências
+└── 📁 react
+    | ⚠️ Antes da execução de um projeto react, certifique-se de que o Node.js esteja instalado corretamente.
+    | Para isso, basta executar o comando "npm -v", no prompt de comando. Caso esteja tudo certo, será apresentado a versão do Node que está instalado.
+    | Caso retorne com a mensagem de não reconhecimento do comando "npm", basta baixar e seguir os passos de instalação do Node.js através do siite oficial: http://nodejs.org/en.
+    └── 📁 modelosEEstudos
+        └── 📁 {{Escolher o modelo desejado para ser executado e testado}}
+            | Abrir o prompt de comando.
+            | Executar o comando "npm install".
+            └── Caso tenha apresentado a seguinte mensagem de erro: "npm.ps1 não pode ser carregado porque a execução de scripts foi desabilitada neste sistema.", seguir os passos abaixo.
+                └── Abra o PowerShell, como Administrador.
+                    | Digite o comando: "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser".
+                    | Depois pressione S e Enter para confirmar.
+                | Agora volta pro seu terminal e repita o comando "npm install".
+            └── Caso o Node tenha retornado com algumas vulnerabilidades, seguir os passos abaixo.
+                | É possível executar o comando "npm audit fix --force" para resolver, "automaticamente", algumas delas.
 
 # Execute o projeto
+> Executar o comando "npm start" para executar o projeto e abri-lo automaticamente pelo Node.js
+
+# Encerrar a execução do projeto
+> Executar o comando "Ctrl + C" para finalzar a execução. Caso, necessário confirmação, basta digitar "Y" e teclar "Enter"
 ```
 
 ## Contribuição
