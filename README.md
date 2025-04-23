@@ -54,8 +54,6 @@ make logs    # Exibe os logs da API
 mvn spring-boot:run
 ```
 
----
-
 ### Frontend
 > ⚠️ Atualmente o Front encontra-se em etapa de modelo, estudo e análises.
 ```bash
@@ -90,6 +88,24 @@ mvn spring-boot:run
 # Encerrar a execução do projeto
 > Executar o comando "Ctrl + C" para finalzar a execução. Caso, necessário confirmação, basta digitar "Y" e teclar "Enter"
 ```
+
+---
+
+## 📘 Swagger (OpenAPI)
+Swagger é um conjunto de ferramentas baseado na OpenAPI Specification, utilizado para projetar, construir, documentar e testar APIs RESTful. Ele gera automaticamente uma interface interativa para explorar todos os endpoints da aplicação, facilitando a compreensão tanto para desenvolvedores quanto para ferramentas externas.
+
+✅ Benefícios:
+- Geração automática da documentação da API.
+- Interface visual e interativa para testes (Swagger UI).
+- Dispensa a necessidade de acessar o código-fonte para entender os recursos disponíveis.
+- Útil para integração entre times frontend e backend.
+
+🚀 Como acessar a documentação Swagger desta aplicação?
+Com a aplicação em execução (veja seção "Como Executar o Projeto"), acesse um dos links abaixo:
+- 👉 http://localhost:8080/swagger-ui.html
+- 👉 http://localhost:8080/swagger-ui/index.html
+
+---
 
 ## Contribuição
 Sinta-se à vontade para contribuir com melhorias ao projeto. Para isso:
