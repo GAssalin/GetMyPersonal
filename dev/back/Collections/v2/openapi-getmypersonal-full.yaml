@@ -1,0 +1,251 @@
+openapi: 3.0.1
+info:
+  title: API GetMyPersonal
+  description: Documentação da API para gerenciamento de treinos, avaliações, profissionais, pacientes e mais.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /api/anamnese-perguntas:
+    get:
+      summary: Listar perguntas de anamnese
+      responses:
+        '200':
+          description: Lista retornada com sucesso
+    post:
+      summary: Criar nova pergunta de anamnese
+      responses:
+        '200':
+          description: Criado com sucesso
+  /api/anamnese-perguntas/{id}:
+    get:
+      summary: Buscar pergunta de anamnese por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Encontrado }
+        '404': { description: Não encontrado }
+    put:
+      summary: Atualizar pergunta de anamnese
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Atualizado com sucesso }
+    delete:
+      summary: Remover pergunta de anamnese
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '204': { description: Removido com sucesso }
+        '404': { description: Não encontrado }
+
+  /api/avaliacoes:
+    get:
+      summary: Listar avaliações
+      responses:
+        '200': { description: Lista retornada com sucesso }
+
+  /api/pessoas:
+    get:
+      summary: Listar pessoas
+      responses:
+        '200': { description: Lista retornada com sucesso }
+
+  /api/consultas:
+    get:
+      summary: Listar consultas
+      responses:
+        '200': { description: Lista retornada com sucesso }
+    post:
+      summary: Criar consulta
+      responses:
+        '200': { description: Consulta criada }
+  /api/consultas/{id}:
+    get:
+      summary: Buscar consulta por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Consulta encontrada }
+    put:
+      summary: Atualizar consulta
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Atualizado }
+    delete:
+      summary: Remover consulta
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '204': { description: Removido }
+
+  /api/treinos:
+    get:
+      summary: Listar treinos
+      responses:
+        '200': { description: Lista de treinos }
+    post:
+      summary: Criar treino
+      responses:
+        '200': { description: Treino criado }
+  /api/treinos/{id}:
+    get:
+      summary: Buscar treino por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Encontrado }
+    put:
+      summary: Atualizar treino
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Atualizado }
+    delete:
+      summary: Remover treino
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '204': { description: Removido }
+
+  /api/exercicios:
+    get:
+      summary: Listar exercícios
+      responses:
+        '200': { description: Lista de exercícios }
+    post:
+      summary: Criar exercício
+      responses:
+        '200': { description: Exercício criado }
+  /api/exercicios/{id}:
+    get:
+      summary: Buscar exercício por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Encontrado }
+    put:
+      summary: Atualizar exercício
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Atualizado }
+    delete:
+      summary: Remover exercício
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '204': { description: Removido }
+
+  /api/pacientes:
+    get:
+      summary: Listar pacientes
+      responses:
+        '200': { description: Lista de pacientes }
+    post:
+      summary: Criar paciente
+      responses:
+        '200': { description: Paciente criado }
+  /api/pacientes/{id}:
+    get:
+      summary: Buscar paciente por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Encontrado }
+    put:
+      summary: Atualizar paciente
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Atualizado }
+    delete:
+      summary: Remover paciente
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '204': { description: Removido }
+
+  /api/profissionais:
+    get:
+      summary: Listar profissionais
+      responses:
+        '200': { description: Lista de profissionais }
+    post:
+      summary: Criar profissional
+      responses:
+        '200': { description: Profissional criado }
+  /api/profissionais/{id}:
+    get:
+      summary: Buscar profissional por ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Encontrado }
+    put:
+      summary: Atualizar profissional
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '200': { description: Atualizado }
+    delete:
+      summary: Remover profissional
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '204': { description: Removido }
