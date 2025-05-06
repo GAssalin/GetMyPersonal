@@ -6,17 +6,11 @@ INSERT INTO anamnese_perguntas (tipo_anamnese, pergunta, tipo_resposta, opcoes_r
 ('PADRAO', 'Se sim, qual cirurgia e quando ocorreu?', 'Texto', NULL),
 ('PADRAO', 'Tem alguma lesão ou dor ao se movimentar?', 'Sim/Não', NULL),
 ('PADRAO', 'Quantas horas por dia você passa sentado?', 'Numérico', NULL),
-('PADRAO', 'Você fuma?', 'Sim/Não', NULL),
-('PADRAO', 'Você consome bebidas alcoólicas?', 'Sim/Não', NULL),
 ('PADRAO', 'Como avalia o seu nível de estresse?', 'Múltipla Escolha', 'Baixo, Médio, Alto'),
 ('PADRAO', 'Como é a sua qualidade de sono?', 'Múltipla Escolha', 'Boa, Regular, Ruim'),
 ('PADRAO', 'Você já praticou exercícios físicos antes?', 'Sim/Não', NULL),
-('PADRAO', 'Qual é a sua experiência com musculação?', 'Múltipla Escolha', 'Nenhuma, 1-2 anos, 3-5 anos, +5 anos'),
-('PADRAO', 'Qual é o seu principal objetivo ao treinar?', 'Múltipla Escolha', 'Hipertrofia, Emagrecimento, Condicionamento, Reabilitação'),
+('PADRAO', 'Qual é o seu principal objetivo ao treinar?', 'Múltipla Escolha', 'Hipertrofia, Emagrecimento, Condicionamento, Reabilitação, Qualidade de Vida'),
 ('PADRAO', 'Você faz acompanhamento nutricional?', 'Sim/Não', NULL),
-('PADRAO', 'Quantas refeições você faz por dia?', 'Numérico', NULL),
-('PADRAO', 'Consome água regularmente?', 'Numérico', NULL),
-('PADRAO', 'Utiliza suplementos alimentares?', 'Sim/Não', NULL);
 
 ('PARQ', 'Algum médico já disse que você tem problema no coração e recomendou que só fizesse atividade física supervisionada?', 'Sim/Não', NULL),
 ('PARQ', 'Você sente dor no peito ao realizar atividade física?', 'Sim/Não', NULL),

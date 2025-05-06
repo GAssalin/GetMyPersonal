@@ -1,0 +1,7 @@
+Para versões futuras, talvez adicionar as seguintes perguntas ao Anamnese:
+('PADRAO', 'Você fuma?', 'Sim/Não', NULL),
+('PADRAO', 'Você consome bebidas alcoólicas?', 'Sim/Não', NULL),
+('PADRAO', 'Qual é a sua experiência com musculação?', 'Múltipla Escolha', 'Nenhuma, 1-2 anos, 3-5 anos, +5 anos'),
+('PADRAO', 'Quantas refeições você faz por dia?', 'Numérico', NULL),
+('PADRAO', 'Consome água regularmente?', 'Numérico', NULL),
+('PADRAO', 'Utiliza suplementos alimentares?', 'Sim/Não', NULL);
